@@ -1,5 +1,5 @@
 import React from 'react';
-import { SimpleGrid, Flex } from '@chakra-ui/react';
+import { SimpleGrid } from '@chakra-ui/react';
 
 import UserPollItem from './UserPollItem';
 

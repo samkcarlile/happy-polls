@@ -1,8 +1,7 @@
 import React from 'react';
-import { Center, Heading } from '@chakra-ui/react';
 
 import Layout from './Layout';
-import DashboardPage from '../pages/dashboard/DashboardPage';
+import DashboardPage from './dashboard/DashboardPage';
 
 const App = () => {
   return (

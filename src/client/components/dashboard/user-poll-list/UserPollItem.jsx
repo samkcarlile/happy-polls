@@ -23,7 +23,7 @@ export default function UserPollItem({
     <Box bgColor="gray.100" height="200px" p={4} rounded={8} shadow="base">
       <Flex h="100%" direction="column">
         <Text as="b" fontSize="2xl" mb={2}>
-          What's your favourite colour?
+          {prompt}
         </Text>
         <Flex flex="1">
           <VStack flex="1">
