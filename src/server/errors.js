@@ -1,4 +1,4 @@
-export class ServerError extends Error {
+class ServerError extends Error {
   constructor({ log, message = '', status = 500, tag } = {}) {
     super(message);
 
@@ -14,7 +14,7 @@ export class ServerError extends Error {
   }
 }
 
-export function errorFactory(
+function errorFactory(
   name,
   { log: _log, message: _message = '', status: _status = 500, tag: _tag } = {}
 ) {
@@ -33,7 +33,7 @@ export function errorFactory(
   return Error;
 }
 
-export function errorHandler(req, res, next, err) {
+function errorHandler(req, res, next, err) {
   // Reference for why this is in here: https://expressjs.com/en/guide/error-handling.html
   if (res.headersSent) return next(err);
 
@@ -42,3 +42,5 @@ export function errorHandler(req, res, next, err) {
 
   res.status(err.status || 500).json({ error: message });
 }
+
+module.exports = { ServerError, errorFactory, errorHandler };

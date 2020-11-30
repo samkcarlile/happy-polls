@@ -1,12 +1,13 @@
 dependencies:
   '@chakra-ui/react': 1.0.1_0df29777d15cb7ed70110c7e825c7577
-  '@emotion/react': 11.1.1_react@17.0.1
-  '@emotion/styled': 11.0.0_8261de72f32fa177f17056425e8e0dc5
+  '@emotion/react': 11.1.1_@babel+core@7.12.9+react@17.0.1
+  '@emotion/styled': 11.0.0_32900e69db55fdbeaa8fe8c6ed675b4f
   cors: 2.8.5
   express: 4.17.1
   express-validator: 6.7.0
   framer-motion: 2.9.4_react-dom@17.0.1+react@17.0.1
   helmet: 4.2.0
+  joi: 17.3.0
   lowdb: 1.0.0
   nanoid: 3.1.18
   react: 17.0.1
@@ -15,6 +16,11 @@ dependencies:
   react-router: 5.2.0_react@17.0.1
   react-router-dom: 5.2.0_react@17.0.1
 devDependencies:
+  '@babel/core': 7.12.9
+  '@babel/eslint-parser': 7.12.1_@babel+core@7.12.9+eslint@7.14.0
+  '@babel/eslint-plugin': 7.12.1_95d3e021da9fa5c50e26758194396b5c
+  '@babel/plugin-syntax-class-properties': 7.12.1_@babel+core@7.12.9
+  '@babel/plugin-syntax-jsx': 7.12.1_@babel+core@7.12.9
   '@snowpack/plugin-dotenv': 2.0.4
   '@snowpack/plugin-react-refresh': 2.3.7_react-dom@17.0.1+react@17.0.1
   eslint: 7.14.0
@@ -56,6 +62,34 @@ packages:
       node: '>=6.9.0'
     resolution:
       integrity: sha512-gTXYh3M5wb7FRXQy+FErKFAv90BnlOuNn1QkCK2lREoPAjrQCO49+HVSrFoe5uakFAF5eenS75KbO2vQiLrTMQ==
+  /@babel/eslint-parser/7.12.1_@babel+core@7.12.9+eslint@7.14.0:
+    dependencies:
+      '@babel/core': 7.12.9
+      eslint: 7.14.0
+      eslint-scope: 5.1.0
+      eslint-visitor-keys: 1.3.0
+      semver: 6.3.0
+    dev: true
+    engines:
+      node: ^10.13.0 || ^12.13.0 || >=14.0.0
+    peerDependencies:
+      '@babel/core': '>=7.11.0'
+      eslint: '>=7.5.0'
+    resolution:
+      integrity: sha512-cc7WQHnHQY3++/bghgbDtPx+5bf6xTsokyGzV6Qzh65NLz/unv+mPQuACkQ9GFhIhcTFv6yqwNaEcfX7EkOEsg==
+  /@babel/eslint-plugin/7.12.1_95d3e021da9fa5c50e26758194396b5c:
+    dependencies:
+      '@babel/eslint-parser': 7.12.1_@babel+core@7.12.9+eslint@7.14.0
+      eslint: 7.14.0
+      eslint-rule-composer: 0.3.0
+    dev: true
+    engines:
+      node: ^10.13.0 || ^12.13.0 || >=14.0.0
+    peerDependencies:
+      '@babel/eslint-parser': '>=7.11.0'
+      eslint: '>=7.5.0'
+    resolution:
+      integrity: sha512-rOjrD5yupTYCO4x0kEbQmi/NsaD+VGOD/9Cvso64WMVPY2y6o5Nvw2sqFWdeSEBdR1Dsa07YjplBs067x5YbXg==
   /@babel/generator/7.12.5:
     dependencies:
       '@babel/types': 7.12.7
@@ -167,10 +201,10 @@ packages:
       '@babel/core': ^7.0.0-0
     resolution:
       integrity: sha512-U40A76x5gTwmESz+qiqssqmeEsKvcSyvtgktrm0uzcARAmM9I1jR221f6Oq+GmHrcD+LvZDag1UTOTe2fL3TeA==
-  /@babel/plugin-syntax-jsx/7.12.1:
+  /@babel/plugin-syntax-jsx/7.12.1_@babel+core@7.12.9:
     dependencies:
+      '@babel/core': 7.12.9
       '@babel/helper-plugin-utils': 7.10.4
-    dev: false
     peerDependencies:
       '@babel/core': ^7.0.0-0
     resolution:
@@ -347,7 +381,7 @@ packages:
       integrity: sha512-HFWRsIWxSZXJFg9865bAWKyQGzY8SjiZbPRW6/IzPS4aoEY7CdWN3X5uAuQZDJnIUOXuLcH13S0rt9k8aXqMSA==
   /@chakra-ui/css-reset/1.0.0_8261de72f32fa177f17056425e8e0dc5:
     dependencies:
-      '@emotion/react': 11.1.1_react@17.0.1
+      '@emotion/react': 11.1.1_@babel+core@7.12.9+react@17.0.1
       react: 17.0.1
     dev: false
     peerDependencies:
@@ -671,8 +705,8 @@ packages:
       '@chakra-ui/transition': 1.0.1_d3e7256f53e106b2f9779d68d0328819
       '@chakra-ui/utils': 1.0.1_react@17.0.1
       '@chakra-ui/visually-hidden': 1.0.1_fb0c12c0f0f6b9f346d61efe6ac64b3b
-      '@emotion/react': 11.1.1_react@17.0.1
-      '@emotion/styled': 11.0.0_8261de72f32fa177f17056425e8e0dc5
+      '@emotion/react': 11.1.1_@babel+core@7.12.9+react@17.0.1
+      '@emotion/styled': 11.0.0_32900e69db55fdbeaa8fe8c6ed675b4f
       framer-motion: 2.9.4_react-dom@17.0.1+react@17.0.1
       react: 17.0.1
     dev: false
@@ -782,8 +816,8 @@ packages:
       '@chakra-ui/color-mode': 1.0.1_react-dom@17.0.1+react@17.0.1
       '@chakra-ui/styled-system': 1.1.0_react@17.0.1
       '@chakra-ui/utils': 1.0.1_react@17.0.1
-      '@emotion/react': 11.1.1_react@17.0.1
-      '@emotion/styled': 11.0.0_8261de72f32fa177f17056425e8e0dc5
+      '@emotion/react': 11.1.1_@babel+core@7.12.9+react@17.0.1
+      '@emotion/styled': 11.0.0_32900e69db55fdbeaa8fe8c6ed675b4f
       react: 17.0.1
       react-fast-compare: 3.2.0
     dev: false
@@ -932,10 +966,11 @@ packages:
       react: 16.x || 17.x
     resolution:
       integrity: sha512-s6mJRj7o/flxu1s5F+t0gGSMDbHEwZdurv+IBs2kaLthJJMil70lZQewduk33qiYRu3g2XjPPhzbHHzjR2aJAA==
-  /@emotion/babel-plugin/11.0.0:
+  /@emotion/babel-plugin/11.0.0_@babel+core@7.12.9:
     dependencies:
+      '@babel/core': 7.12.9
       '@babel/helper-module-imports': 7.12.5
-      '@babel/plugin-syntax-jsx': 7.12.1
+      '@babel/plugin-syntax-jsx': 7.12.1_@babel+core@7.12.9
       '@babel/runtime': 7.12.5
       '@emotion/hash': 0.8.0
       '@emotion/memoize': 0.7.4
@@ -982,8 +1017,9 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==
-  /@emotion/react/11.1.1_react@17.0.1:
+  /@emotion/react/11.1.1_@babel+core@7.12.9+react@17.0.1:
     dependencies:
+      '@babel/core': 7.12.9
       '@babel/runtime': 7.12.5
       '@emotion/cache': 11.0.0
       '@emotion/serialize': 1.0.0
@@ -1018,12 +1054,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-cdCHfZtf/0rahPDCZ9zyq+36EqfD/6c0WUqTFZ/hv9xadTUv2lGE5QK7/Z6Dnx2oRxC0usfVM2/BYn9q9B9wZA==
-  /@emotion/styled/11.0.0_8261de72f32fa177f17056425e8e0dc5:
+  /@emotion/styled/11.0.0_32900e69db55fdbeaa8fe8c6ed675b4f:
     dependencies:
+      '@babel/core': 7.12.9
       '@babel/runtime': 7.12.5
-      '@emotion/babel-plugin': 11.0.0
+      '@emotion/babel-plugin': 11.0.0_@babel+core@7.12.9
       '@emotion/is-prop-valid': 1.0.0
-      '@emotion/react': 11.1.1_react@17.0.1
+      '@emotion/react': 11.1.1_@babel+core@7.12.9+react@17.0.1
       '@emotion/serialize': 1.0.0
       '@emotion/utils': 1.0.0
       react: 17.0.1
@@ -1070,13 +1107,11 @@ packages:
     resolution:
       integrity: sha512-XRUeBZ5zBWLYgSANMpThFddrZZkEbGHgUdt5UJjZfnlN9BGCiUBrf+nvbRupSjMvqzwnQN0qwCmOxITt1cfywA==
   /@hapi/hoek/9.1.0:
-    dev: true
     resolution:
       integrity: sha512-i9YbZPN3QgfighY/1X1Pu118VUz2Fmmhd6b2n0/O8YVgGGfw0FbUYoA97k7FkpGJ+pLCFEDLUmAPPV4D1kpeFw==
   /@hapi/topo/5.0.0:
     dependencies:
       '@hapi/hoek': 9.1.0
-    dev: true
     resolution:
       integrity: sha512-tFJlT47db0kMqVm3H4nQYgn6Pwg10GTZHb1pwmSiv1K4ks6drQOtfEF5ZnPjkvC+y4/bUPHK+bc87QvLcL+WMw==
   /@npmcli/move-file/1.0.1:
@@ -1231,15 +1266,12 @@ packages:
   /@sideway/address/4.1.0:
     dependencies:
       '@hapi/hoek': 9.1.0
-    dev: true
     resolution:
       integrity: sha512-wAH/JYRXeIFQRsxerIuLjgUu2Xszam+O5xKeatJ4oudShOOirfmsQ1D6LL54XOU2tizpCYku+s1wmU0SYdpoSA==
   /@sideway/formula/3.0.0:
-    dev: true
     resolution:
       integrity: sha512-vHe7wZ4NOXVfkoRb8T5otiENVlT7a3IAiw7H5M2+GO+9CDgcVUUsX1zalAztCmwyOr2RUTGJdgB+ZvSVqmdHmg==
   /@sideway/pinpoint/2.0.0:
-    dev: true
     resolution:
       integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
   /@sindresorhus/is/0.14.0:
@@ -2246,6 +2278,21 @@ packages:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7
     resolution:
       integrity: sha512-8MaEggC2et0wSF6bUeywF7qQ46ER81irOdWS4QWxnnlAEsnzeBevk1sWh7fhpCghPpXb+8Ks7hvaft6L/xsR6g==
+  /eslint-rule-composer/0.3.0:
+    dev: true
+    engines:
+      node: '>=4.0.0'
+    resolution:
+      integrity: sha512-bt+Sh8CtDmn2OajxvNO+BX7Wn4CIWMpTRm3MaiKPCQcnnlm0CS2mhui6QaoeQugs+3Kj2ESKEEGJUdVafwhiCg==
+  /eslint-scope/5.1.0:
+    dependencies:
+      esrecurse: 4.3.0
+      estraverse: 4.3.0
+    dev: true
+    engines:
+      node: '>=8.0.0'
+    resolution:
+      integrity: sha512-iiGRvtxWqgtx5m8EyQUJihBloE4EnYeGE/bz1wSPwJE6tZuJUtHlhqDM4Xj2ukE8Dyy1+HCZ4hE0fzIVMzb58w==
   /eslint-scope/5.1.1:
     dependencies:
       esrecurse: 4.3.0
@@ -3148,7 +3195,6 @@ packages:
       '@sideway/address': 4.1.0
       '@sideway/formula': 3.0.0
       '@sideway/pinpoint': 2.0.0
-    dev: true
     resolution:
       integrity: sha512-Qh5gdU6niuYbUIUV5ejbsMiiFmBdw8Kcp8Buj2JntszCkCfxJ9Cz76OtHxOZMPXrt5810iDIXs+n1nNVoquHgg==
   /js-tokens/4.0.0:
@@ -5047,6 +5093,11 @@ packages:
     resolution:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 specifiers:
+  '@babel/core': ^7.12.9
+  '@babel/eslint-parser': ^7.12.1
+  '@babel/eslint-plugin': ^7.12.1
+  '@babel/plugin-syntax-class-properties': ^7.12.1
+  '@babel/plugin-syntax-jsx': ^7.12.1
   '@chakra-ui/react': ^1.0.1
   '@emotion/react': ^11.1.1
   '@emotion/styled': ^11.0.0
@@ -5062,6 +5113,7 @@ specifiers:
   express-validator: ^6.7.0
   framer-motion: ^2.9.4
   helmet: ^4.2.0
+  joi: ^17.3.0
   lowdb: ^1.0.0
   nanoid: ^3.1.18
   nodemon: ^2.0.6

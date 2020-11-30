@@ -1,14 +1,8 @@
-/** @type import("express").Handler */
-export async function getAllPolls(req, res, next) {}
-
-/** @type import("express").Handler */
-export async function getPoll(req, res, next) {}
-
-/** @type import("express").Handler */
-export async function createPoll(req, res, next) {}
-
-/** @type import("express").Handler */
-export async function updatePoll(req, res, next) {}
-
-/** @type import("express").Handler */
-export async function deletePoll(req, res, next) {}
+/** @type {Object.<string, import("express").Handler>} */
+module.exports = {
+  async getAllPolls(req, res, next) {},
+  async getPoll(req, res, next) {},
+  async createPoll(req, res, next) {},
+  async updatePoll(req, res, next) {},
+  async deletePoll(req, res, next) {},
+};

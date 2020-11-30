@@ -1,9 +1,9 @@
-import express from 'express';
-import helmet from 'helmet';
-import cors from 'cors';
+const express = require('express');
+const helmet = require('helmet');
+const cors = require('cors');
 
-import { errorHandler } from './errors.js';
-import routes from './routes/routes.js';
+const { errorHandler } = require('./errors.js');
+const routes = require('./routes/index.js');
 
 const app = express();
 

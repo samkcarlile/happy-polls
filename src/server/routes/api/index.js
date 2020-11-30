@@ -1,8 +1,7 @@
-import express from 'express';
-const router = express.Router();
+const router = require('express').Router;
 
-import polls from './polls.js';
+const polls = require('./polls');
 
 router.use('/polls', polls);
 
-export default router;
+module.exports = router;
