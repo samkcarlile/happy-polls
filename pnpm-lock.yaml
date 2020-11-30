@@ -2,9 +2,12 @@ dependencies:
   '@chakra-ui/react': 1.0.1_0df29777d15cb7ed70110c7e825c7577
   '@emotion/react': 11.1.1_react@17.0.1
   '@emotion/styled': 11.0.0_8261de72f32fa177f17056425e8e0dc5
+  cors: 2.8.5
   express: 4.17.1
+  express-validator: 6.7.0
   framer-motion: 2.9.4_react-dom@17.0.1+react@17.0.1
   helmet: 4.2.0
+  lowdb: 1.0.0
   nanoid: 3.1.18
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
@@ -1819,6 +1822,15 @@ packages:
     dev: false
     resolution:
       integrity: sha512-i13qo6kIHTTpCm8/Wup+0b1mVWETvu2kIMzKoK8FpkLkFxlt0znUAHcMzox+T8sPlqtZXq3CulEjQHsYiGFJUw==
+  /cors/2.8.5:
+    dependencies:
+      object-assign: 4.1.1
+      vary: 1.1.2
+    dev: false
+    engines:
+      node: '>= 0.10'
+    resolution:
+      integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==
   /cosmiconfig/6.0.0:
     dependencies:
       '@types/parse-json': 4.0.0
@@ -2396,6 +2408,15 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-j5W0//W7f8UxAn8hXVnwG8tLwdiUy4FJLcSupCg6maBYZDpyBvTApK7KyuI4bKj8KOh1r2YH+6ucuYtJv1bTZA==
+  /express-validator/6.7.0:
+    dependencies:
+      lodash: 4.17.20
+      validator: 13.1.17
+    dev: false
+    engines:
+      node: '>= 8.0.0'
+    resolution:
+      integrity: sha512-sLnTFlyKEvesC2Fyn1TY4Q05cWCZHQQ1ijQOVbBG7hFeTKt4CNzttoF4t6CqrYroKa+2DOzj0E09odPIYDTbRg==
   /express/4.17.1:
     dependencies:
       accepts: 1.3.7
@@ -2708,7 +2729,6 @@ packages:
     resolution:
       integrity: sha512-R7eWptXuGYxwijs0eV+v3o6+XH1IqVK8dJOEecQfTmkncw9AV4dcw/Dhxi8MdlqPthxxpZyizMzyg8RTmEsG+Q==
   /graceful-fs/4.2.4:
-    dev: true
     resolution:
       integrity: sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
   /has-ansi/2.0.0:
@@ -3053,6 +3073,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q==
+  /is-promise/2.2.2:
+    dev: false
+    resolution:
+      integrity: sha512-+lP4/6lKUBfQjZ2pdxThZvLUAafmZb8OAxFb8XXtiQmS35INgr85hdOGoEs124ez1FCnZJt6jau/T+alh58QFQ==
   /is-reference/1.2.1:
     dependencies:
       '@types/estree': 0.0.45
@@ -3258,6 +3282,18 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
+  /lowdb/1.0.0:
+    dependencies:
+      graceful-fs: 4.2.4
+      is-promise: 2.2.2
+      lodash: 4.17.20
+      pify: 3.0.0
+      steno: 0.4.4
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-2+x8esE/Wb9SQ1F9IHaYWfsC9FIecLOPrK4g17FGEayjUWH172H6nwicRovGvSE2CPZouc2MCIqCI7h9d+GftQ==
   /lowercase-keys/1.0.1:
     dev: true
     engines:
@@ -3821,7 +3857,6 @@ packages:
     resolution:
       integrity: sha512-qQbW94hLHEqCg7nhby4yRC7G2+jYHY4Rguc2bjw7Uug4GIJuu1tvf2uHaZv5Q8zdt+WKJ6qK1FOI6amaWUo5FA==
   /pify/3.0.0:
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -4495,6 +4530,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+  /steno/0.4.4:
+    dependencies:
+      graceful-fs: 4.2.4
+    dev: false
+    resolution:
+      integrity: sha1-BxEFvfwobmYVwEA8J+nXtdy4Vcs=
   /string-width/3.1.0:
     dependencies:
       emoji-regex: 7.0.3
@@ -4878,6 +4919,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-X6kS2B630MdK/BQN5zF/DKffQ34=
+  /validator/13.1.17:
+    dev: false
+    engines:
+      node: '>= 0.10'
+    resolution:
+      integrity: sha512-zL5QBoemJ3jYFb2/j38y7ljhwYGXVLUp8H6W1nVxadnAOvUOytec+L7BHh1oBQ82/TzWXHd+GSaxUWp4lROkLg==
   /value-equal/1.0.1:
     dev: false
     resolution:
@@ -5005,14 +5052,17 @@ specifiers:
   '@emotion/styled': ^11.0.0
   '@snowpack/plugin-dotenv': ^2.0.4
   '@snowpack/plugin-react-refresh': ^2.3.7
+  cors: ^2.8.5
   eslint: ^7.14.0
   eslint-config-prettier: ^6.15.0
   eslint-config-problems: ^5.0.0
   eslint-plugin-react: ^7.21.5
   eslint-plugin-react-hooks: ^4.2.0
   express: ^4.17.1
+  express-validator: ^6.7.0
   framer-motion: ^2.9.4
   helmet: ^4.2.0
+  lowdb: ^1.0.0
   nanoid: ^3.1.18
   nodemon: ^2.0.6
   npm-run-all: ^4.1.5
